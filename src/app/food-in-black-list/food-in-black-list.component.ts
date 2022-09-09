@@ -27,6 +27,8 @@ export class FoodInBlackListComponent implements OnInit, OnChanges {
       description: ['', Validators.required]
     })
 
+    
+
     setTimeout(() => {
       this.foodService.getFoods().subscribe(data => this.foods = data);
     }, 40000)
@@ -48,9 +50,7 @@ export class FoodInBlackListComponent implements OnInit, OnChanges {
   }
 
 
-  removeWhiteSpaces (input: string) { 
-    return input.replace(/\s+/g, '').trim();
-  }
+
 
 
 }
