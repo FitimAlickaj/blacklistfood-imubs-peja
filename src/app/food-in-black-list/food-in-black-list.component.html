@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="left">
+    <ul *ngFor="let food of foods" class="modal">
+      <p class="modalName">
+        <img src="../../assets/images/store.png" alt="" srcset="" />:
+        {{ food.name }}
+      </p>
+      <p class="modalDescription">
+        <img src="../../assets/images/description.png" alt="" srcset="" />:
+        {{ food.description }}
+      </p>
+    </ul>
+  </div>
+  <div class="right">
+    <form class="formValidator" [formGroup]="form" (ngSubmit)="addUsers(form.value)"  >
+      <span *ngIf="form.controls['name'].invalid" class="requiredSpan"
+      >Name is required</span
+    >
+      <input
+        formControlName="name"
+        type="text"
+        class="feedback-input"
+        placeholder="Enter Name"
+      />
+      <span *ngIf="form.controls['description'].invalid" class="requiredSpan"
+      >Description is required</span
+    >
+      <textarea
+        formControlName="description"
+        class="feedback-input"
+        placeholder="Enter Description"
+      ></textarea>
+      <input type="submit" value="ADD NEW FOOD" [disabled]="form.invalid" />
+   
+    </form>
+  </div>
+</div>
