@@ -3,11 +3,11 @@
     <ul *ngFor="let food of foods" class="modal">
       <p class="modalName">
         <img src="../../assets/images/store.png" alt="" srcset="" />:
-        {{ food.name }}
+        {{ removeWhiteSpaces(food.name) }}
       </p>
       <p class="modalDescription">
         <img src="../../assets/images/description.png" alt="" srcset="" />:
-        {{ food.description }}
+        {{ removeWhiteSpaces(food.description) }}
       </p>
     </ul>
   </div>
