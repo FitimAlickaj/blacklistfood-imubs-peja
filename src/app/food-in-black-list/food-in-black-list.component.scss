@@ -111,6 +111,12 @@
               }
               [type="submit"]:hover { background:#008F64; }
               
+              
+              .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
         }
     }
 }
