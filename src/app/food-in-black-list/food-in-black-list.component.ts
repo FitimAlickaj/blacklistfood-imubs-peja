@@ -31,7 +31,7 @@ export class FoodInBlackListComponent implements OnInit, OnChanges {
 
     setTimeout(() => {
       this.foodService.getFoods().subscribe(data => this.foods = data);
-    }, 40000)
+    }, 10000)
   }
 
   addUsers(data: any) {
